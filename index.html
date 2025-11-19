@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blockchain Simulator - PENS Style</title>
+    <title>Blockchain Simulator - Muhammad Nafis</title>
     <link rel="stylesheet" href="style4.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
@@ -35,12 +35,12 @@
           <li><strong>Menu Bar yang tersedia:</strong>
             <ol>
               <li><strong>Home:</strong> Tampilan awal Website.</li>
-              <li><strong>About Me:</strong> Profil pembuat Website.</li>
-              <li><strong>Hash:</strong> Masukkan input teks pada area <em>Text Input</em>, lalu hasil <em>SHA-256 Hash</em> akan muncul otomatis setiap kali teks diubah.</li>
-              <li><strong>Block:</strong> Anda dapat mengganti nomor blok, memberi input data, serta mengatur kecepatan mining. Tekan tombol <em>Mine</em> untuk memulai proses mining. Setelah menemukan hash dengan 4 angka nol di awal, nilai <em>Nonce</em>, <em>Timestamp</em>, dan <em>Hash Block</em> akan muncul.</li>
-              <li><strong>Block Chain:</strong> Masukkan data, tekan <em>Mine</em>, lalu <em>Add Block</em> untuk menambah blok baru. Perhatikan bahwa <em>Previous Hash</em> pada blok baru sama dengan hash blok sebelumnya.</li>
-              <li><strong>ECC Signature:</strong> Klik <em>Generate Key Pair</em> untuk membuat <em>Public Key</em> dan <em>Private Key</em>. Tulis pesan dan tekan <em>Sign Message</em> untuk menghasilkan signature. Gunakan <em>Verify Signature</em> untuk memeriksa validitas signature.</li>
-              <li><strong>Konsensus:</strong> Simulasi dengan 3 user (saldo awal 100 koin). Buat transaksi, kirim, lalu tekan <em>Mine Semua Transaksi</em> untuk membuat blok baru. Jika data diubah secara manual dan tombol <em>Verify</em> ditekan, maka blok yang datanya diubah akan menjadi merah muda (invalid). Tekan tombol <em>Consensus</em> untuk memperbaikinya dengan mekanisme konsensus.</li>
+              <li><strong>About Me:</strong> Profil pembuat Website (CV & Portofolio).</li>
+              <li><strong>Hash:</strong> Simulasi SHA-256 Hash.</li>
+              <li><strong>Block:</strong> Simulasi mining block tunggal.</li>
+              <li><strong>Block Chain:</strong> Simulasi rantai blok (chain).</li>
+              <li><strong>ECC Signature:</strong> Simulasi tanda tangan digital (Public/Private Key).</li>
+              <li><strong>Konsensus:</strong> Simulasi transaksi dan konsensus antar user.</li>
             </ol>
           </li>
         </ul>
@@ -48,10 +48,10 @@
 
       <div class="footer-logos">
         <div class="logo-container">
- 
+          <img src="logo pens.png" alt="Logo PENS" style="height: 50px;">
           <div class="contact-mini">
-            <div><i class="fas fa-envelope"></i> Email: nafisassalam2024@gmail.com</div>
-        
+            <div><i class="fas fa-envelope"></i> Email: nafisbro2024@gmail.com</div>
+            <div><i class="fas fa-university"></i> Politeknik Elektronika Negeri Surabaya</div>
           </div>
         </div>
       </div>
@@ -63,31 +63,78 @@
       <div class="about-header">
         <img 
           src="ini gweh.png" 
-          alt="Foto Profil" 
+          alt="Muhammad Nafis" 
           class="profile-pic"
+          onerror="this.src='https://ui-avatars.com/api/?name=Muhammad+Nafis&background=0D8ABC&color=fff&size=200'"
         />
         <div class="profile-info">
           <h3>Muhammad Nafis Ar-Rosyid As-Salam</h3>
           <p class="job-title">
-            Mahasiswa di <strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong>
+            Mahasiswa Teknologi Rekayasa Multimedia di <strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong>
           </p>
-          <p>Program Studi Teknologi Rekayasa Multimedia.</p>
+          <p>
+            Menggabungkan seni dan teknologi untuk merancang pengalaman digital yang bermakna. 
+            Memiliki keahlian kuat dalam desain grafis, animasi 3D, dan pembuatan konten kreatif.
+          </p>
         </div>
       </div>
 
-      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+      <hr class="divider">
+
+      <div class="cv-container">
+        <div class="cv-column">
+          <div class="cv-card">
+            <h4><i class="fas fa-graduation-cap"></i> Pendidikan</h4>
+            <p><strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong><br>
+            D4 Teknologi Rekayasa Multimedia (2023 - Sekarang)</p>
+          </div>
+          
+          <div class="cv-card">
+            <h4><i class="fas fa-tools"></i> Software & Tools</h4>
+            <p>
+              Blender, ZBrush, Unreal Engine, Unity, Substance Painter,<br>
+              Adobe (After Effects, Premiere Pro, Photoshop), CorelDRAW.
+            </p>
+          </div>
+
+          <div class="cv-card">
+            <h4><i class="fas fa-paint-brush"></i> Keahlian Kreatif</h4>
+            <p>3D Modeling, Animation, Environment & Character Design, Videography.</p>
+          </div>
+        </div>
+
+        <div class="cv-column">
+          <div class="cv-card">
+            <h4><i class="fas fa-trophy"></i> Prestasi & Pengalaman</h4>
+            <ul class="cv-list">
+              <li><strong>Lolos Pendanaan PKM-VGK</strong> (April 2024)</li>
+              <li><strong>Juara 2</strong> LKS SMK Multimedia: 3D Game Character Design (2023)</li>
+              <li><strong>Juara 1</strong> Immersive Fiesta: 3D Animation & Character Design (2023)</li>
+              <li><strong>Wakil Ketua</strong> Event TRM Immersive Fiesta (Maret 2024)</li>
+              <li><strong>Apprenticeship</strong> Jawapos Radar Banyuwangi (Kameramen & Desainer)</li>
+              <li><strong>Project:</strong> Desain Environment VR untuk TRM Expo & KMIPN Game Dev</li>
+            </ul>
+          </div>
+           <div class="cv-card">
+            <h4><i class="fas fa-link"></i> Portofolio</h4>
+            <p>Lihat karya saya di: <a href="https://drive.google.com/drive/folders/1QsdtsETIBjU_Q7gTfEJO4MJ6QuxoW7zc?usp=sharing" target="_blank">Google Drive Portfolio</a></p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider">
 
       <div class="contact-wrapper">
         <div class="address-text">
-          <strong>Kontak</strong><br>
-          <strong>Kampus PENS Sukolilo</strong>, Surabaya
+          <strong>Lokasi Kampus:</strong><br>
+          Kampus PENS, Jl. Raya ITS, Keputih, Kec. Sukolilo, Surabaya.
         </div>
 
         <div class="contact-split-layout">
           <div class="map-column">
             <div class="map-frame">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.692024137637!2d112.79156707584643!3d-7.275841771496442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa10ea2ae883%3A0xbe22c55d60ef09c7!2sPoliteknik%20Elektronika%20Negeri%20Surabaya!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.691977068663!2d112.79156707586315!3d-7.275847092731067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa10ea2ae883%3A0xbe22c55d60ef0bc6!2sPoliteknik%20Elektronika%20Negeri%20Surabaya!5e0!3m2!1sid!2sid!4v1715581234567!5m2!1sid!2sid" 
                 width="100%" 
                 height="400" 
                 style="border:0;" 
@@ -98,7 +145,7 @@
           </div>
 
           <div class="form-column">
-            <div class="contact-card">
+            <div class="contact-card-form">
               <h4>Hubungi Saya</h4>
               
               <label>Nama</label>
@@ -121,12 +168,13 @@
 
       <div class="footer-logos" style="margin-top: 30px;">
         <div class="logo-container">
+          <img src="logo pens.png" alt="Logo PENS" style="height: 40px;">
           <div class="contact-mini">
-             <div>Email: nafisassalam2024@gmail.com</div>
+             <div>Email: nafisbro2024@gmail.com</div>
+             <div>WhatsApp: 085198356977</div>
           </div>
         </div>
       </div>
-
     </div>
 
     <div id="page-hash" class="page">
@@ -139,31 +187,23 @@
 
     <div id="page-block" class="page">
       <h2>Single Block</h2>
-
       <label for="block-number"># (Nomor Block):</label>
       <input id="block-number" type="number" min="0" value="0" />
-
       <label for="block-data">Data:</label>
       <textarea id="block-data" rows="4"></textarea>
-
       <label for="block-nonce">Nonce:</label>
       <input id="block-nonce" type="text" maxlength="9" />
-
       <label for="block-timestamp">Timestamp:</label>
       <input id="block-timestamp" type="text" readonly />
-
       <label>Hash:</label>
       <div id="block-hash" class="output"></div>
-
       <button id="btn-mine" class="mine">Mine</button>
-
       <label for="speed-control">Kecepatan Mining:</label>
       <select id="speed-control">
         <option value="1">Normal</option>
         <option value="10">10x Lebih Cepat</option>
         <option value="50">50x Lebih Cepat</option>
       </select>
-
       <div id="mining-status" class="status"></div>
     </div>
 
@@ -177,24 +217,18 @@
 
     <div id="page-ecc" class="page">
       <h2>Verifikasi ECC Digital Signature</h2>
-
       <button id="btn-generate-key">Generate Key Pair</button>
       <p>Public Key dan Private Key dapat diedit untuk percobaan.</p>
-
       <label>Public Key:</label>
       <textarea id="ecc-public" rows="3"></textarea>
-
       <label>Private Key:</label>
       <textarea id="ecc-private" rows="3"></textarea>
-
       <hr />
       <label>Pesan yang akan ditandatangani:</label>
       <textarea id="ecc-message" rows="3"></textarea>
-
       <button id="btn-sign">Sign Message</button>
       <label>Hasil Signature (DER hex):</label>
       <textarea id="ecc-signature" rows="3" readonly></textarea>
-
       <hr />
       <button id="btn-verify">Verify Signature</button>
       <div id="ecc-verify-result" class="output"></div>
@@ -202,7 +236,6 @@
 
     <div id="page-consensus" class="page">
       <h2>Simulasi Konsensus</h2>
-
       <div class="wallets">
         <div class="wallet" data-user="A">
           <h3>User A</h3>
@@ -216,7 +249,6 @@
           <input id="amount-A" type="number" min="1" value="10" />
           <button id="send-A">Kirim</button>
         </div>
-
         <div class="wallet" data-user="B">
           <h3>User B</h3>
           <div>Saldo: <span id="saldo-B">100</span></div>
@@ -229,7 +261,6 @@
           <input id="amount-B" type="number" min="1" value="10" />
           <button id="send-B">Kirim</button>
         </div>
-
         <div class="wallet" data-user="C">
           <h3>User C</h3>
           <div>Saldo: <span id="saldo-C">100</span></div>
@@ -243,22 +274,15 @@
           <button id="send-C">Kirim</button>
         </div>
       </div>
-
       <div style="margin-top: 12px">
         <label>Mempool (pending transactions):</label>
-        <textarea
-          id="mempool"
-          rows="3"
-          placeholder="Setiap transaksi di baris baru. Contoh: A -> B:10"
-        ></textarea>
+        <textarea id="mempool" rows="3" placeholder="Setiap transaksi di baris baru. Contoh: A -> B:10"></textarea>
       </div>
-
       <div style="margin-top: 12px">
         <button id="btn-mine-all">Mine Semua Transaksi</button>
         <button id="btn-verify-consensus">Verify</button>
         <button id="btn-consensus">Consensus</button>
       </div>
-
       <h3 style="margin-top: 20px">Blockchain Tiap User</h3>
       <div id="chains">
         <h4>Database User A</h4>
