@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockchain Simulator - PENS Style</title>
+    <link rel="stylesheet" href="style4.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <button id="tab-home" class="active">Home</button>
+      <button id="tab-about">About Me</button>
+      <button id="tab-hash">Hash</button>
+      <button id="tab-block">Block</button>
+      <button id="tab-chain">Block Chain</button>
+      <button id="tab-ecc">ECC Signature</button>
+      <button id="tab-consensus">Konsensus</button>
+    </div>
+
+    <div id="page-home" class="page active">
+      <h2>Selamat datang di Website Belajar Blockchain</h2>
+      <div id="datetime" class="date-display"></div>
+
+      <div class="guide-section">
+        <div class="guide-header">
+          <span class="blue-bar"></span>
+          <h3>Petunjuk Penggunaan</h3>
+        </div>
+        <p>
+          Website ini dirancang untuk membantu memahami konsep dan simulasi berbagai teknik dalam <strong>Blockchain Technology</strong>. Ikuti langkah-langkah berikut:
+        </p>
+        <ul>
+          <li>Klik pada bagian <strong>Menu Bar</strong> di bagian atas untuk memilih simulasi atau fitur yang ingin dipelajari.</li>
+          <li><strong>Menu Bar yang tersedia:</strong>
+            <ol>
+              <li><strong>Home:</strong> Tampilan awal Website.</li>
+              <li><strong>About Me:</strong> Profil pembuat Website.</li>
+              <li><strong>Hash:</strong> Masukkan input teks pada area <em>Text Input</em>, lalu hasil <em>SHA-256 Hash</em> akan muncul otomatis setiap kali teks diubah.</li>
+              <li><strong>Block:</strong> Anda dapat mengganti nomor blok, memberi input data, serta mengatur kecepatan mining. Tekan tombol <em>Mine</em> untuk memulai proses mining. Setelah menemukan hash dengan 4 angka nol di awal, nilai <em>Nonce</em>, <em>Timestamp</em>, dan <em>Hash Block</em> akan muncul.</li>
+              <li><strong>Block Chain:</strong> Masukkan data, tekan <em>Mine</em>, lalu <em>Add Block</em> untuk menambah blok baru. Perhatikan bahwa <em>Previous Hash</em> pada blok baru sama dengan hash blok sebelumnya.</li>
+              <li><strong>ECC Signature:</strong> Klik <em>Generate Key Pair</em> untuk membuat <em>Public Key</em> dan <em>Private Key</em>. Tulis pesan dan tekan <em>Sign Message</em> untuk menghasilkan signature. Gunakan <em>Verify Signature</em> untuk memeriksa validitas signature.</li>
+              <li><strong>Konsensus:</strong> Simulasi dengan 3 user (saldo awal 100 koin). Buat transaksi, kirim, lalu tekan <em>Mine Semua Transaksi</em> untuk membuat blok baru. Jika data diubah secara manual dan tombol <em>Verify</em> ditekan, maka blok yang datanya diubah akan menjadi merah muda (invalid). Tekan tombol <em>Consensus</em> untuk memperbaikinya dengan mekanisme konsensus.</li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-logos">
+        <div class="logo-container">
+          <img src="https://www.pens.ac.id/wp-content/uploads/2018/04/Logo-PENS-v2.png" alt="Logo PENS" style="height: 50px;">
+          <div class="contact-mini">
+            <div><i class="fas fa-envelope"></i> Email: magusz@pens.ac.id</div>
+            <div><i class="fas fa-globe"></i> Website: Profil Dosen di e-Katalog PENS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page-about" class="page">
+      <h2>About Me</h2>
+      
+      <div class="about-header">
+        <img 
+          src="https://ui-avatars.com/api/?name=User+PENS&background=random&size=200" 
+          alt="Foto Profil" 
+          class="profile-pic"
+        />
+        <div class="profile-info">
+          <h3>Muhammad Nafis Ar-Rosyid As-Salam</h3>
+          <p class="job-title">
+            Mahasiswa di <strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong>
+          </p>
+          <p>Program Studi Teknologi Rekayasa Multimedia.</p>
+        </div>
+      </div>
+
+      <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+
+      <div class="contact-wrapper">
+        <div class="address-text">
+          <strong>Kontak</strong><br>
+          <strong>Kampus PENS Sukolilo</strong>, Surabaya
+        </div>
+
+        <div class="contact-split-layout">
+          <div class="map-column">
+            <div class="map-frame">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.692024137637!2d112.79156707584643!3d-7.275841771496442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa10ea2ae883%3A0xbe22c55d60ef09c7!2sPoliteknik%20Elektronika%20Negeri%20Surabaya!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="form-column">
+            <div class="contact-card">
+              <h4>Hubungi Saya</h4>
+              
+              <label>Nama</label>
+              <input type="text" placeholder="Nama Anda" class="form-input">
+
+              <label>Email</label>
+              <input type="email" placeholder="Email Anda" class="form-input">
+
+              <label>Nomor Telepon</label>
+              <input type="text" placeholder="Nomor HP" class="form-input">
+
+              <label>Pesan</label>
+              <textarea rows="4" placeholder="Tulis pesan Anda di sini..." class="form-input"></textarea>
+
+              <button class="btn-send">Kirim Pesan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-logos" style="margin-top: 30px;">
+        <div class="logo-container">
+          <img src="https://www.pens.ac.id/wp-content/uploads/2018/04/Logo-PENS-v2.png" alt="Logo PENS" style="height: 40px;">
+          <div class="contact-mini">
+             <div>Email: nafisassalam2024@gmail.com</div>
+             <div>Website: Profil Dosen di e-Katalog PENS</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="page-hash" class="page">
+      <h2>Hash Generator</h2>
+      <label for="hash-input">Text Input:</label>
+      <textarea id="hash-input" rows="4"></textarea>
+      <label>SHA-256 Hash:</label>
+      <div id="hash-output" class="output"></div>
+    </div>
+
+    <div id="page-block" class="page">
+      <h2>Single Block</h2>
+
+      <label for="block-number"># (Nomor Block):</label>
+      <input id="block-number" type="number" min="0" value="0" />
+
+      <label for="block-data">Data:</label>
+      <textarea id="block-data" rows="4"></textarea>
+
+      <label for="block-nonce">Nonce:</label>
+      <input id="block-nonce" type="text" maxlength="9" />
+
+      <label for="block-timestamp">Timestamp:</label>
+      <input id="block-timestamp" type="text" readonly />
+
+      <label>Hash:</label>
+      <div id="block-hash" class="output"></div>
+
+      <button id="btn-mine" class="mine">Mine</button>
+
+      <label for="speed-control">Kecepatan Mining:</label>
+      <select id="speed-control">
+        <option value="1">Normal</option>
+        <option value="10">10x Lebih Cepat</option>
+        <option value="50">50x Lebih Cepat</option>
+      </select>
+
+      <div id="mining-status" class="status"></div>
+    </div>
+
+    <div id="page-chain" class="page">
+      <h2>Blockchain</h2>
+      <div id="blockchain" class="chain-container"></div>
+      <div class="chain-controls">
+        <button id="btn-add-block">Add Block</button>
+      </div>
+    </div>
+
+    <div id="page-ecc" class="page">
+      <h2>Verifikasi ECC Digital Signature</h2>
+
+      <button id="btn-generate-key">Generate Key Pair</button>
+      <p>Public Key dan Private Key dapat diedit untuk percobaan.</p>
+
+      <label>Public Key:</label>
+      <textarea id="ecc-public" rows="3"></textarea>
+
+      <label>Private Key:</label>
+      <textarea id="ecc-private" rows="3"></textarea>
+
+      <hr />
+      <label>Pesan yang akan ditandatangani:</label>
+      <textarea id="ecc-message" rows="3"></textarea>
+
+      <button id="btn-sign">Sign Message</button>
+      <label>Hasil Signature (DER hex):</label>
+      <textarea id="ecc-signature" rows="3" readonly></textarea>
+
+      <hr />
+      <button id="btn-verify">Verify Signature</button>
+      <div id="ecc-verify-result" class="output"></div>
+    </div>
+
+    <div id="page-consensus" class="page">
+      <h2>Simulasi Konsensus</h2>
+
+      <div class="wallets">
+        <div class="wallet" data-user="A">
+          <h3>User A</h3>
+          <div>Saldo: <span id="saldo-A">100</span></div>
+          <label>Penerima:</label>
+          <select id="receiver-A">
+            <option value="B">User B</option>
+            <option value="C">User C</option>
+          </select>
+          <label>Jumlah:</label>
+          <input id="amount-A" type="number" min="1" value="10" />
+          <button id="send-A">Kirim</button>
+        </div>
+
+        <div class="wallet" data-user="B">
+          <h3>User B</h3>
+          <div>Saldo: <span id="saldo-B">100</span></div>
+          <label>Penerima:</label>
+          <select id="receiver-B">
+            <option value="A">User A</option>
+            <option value="C">User C</option>
+          </select>
+          <label>Jumlah:</label>
+          <input id="amount-B" type="number" min="1" value="10" />
+          <button id="send-B">Kirim</button>
+        </div>
+
+        <div class="wallet" data-user="C">
+          <h3>User C</h3>
+          <div>Saldo: <span id="saldo-C">100</span></div>
+          <label>Penerima:</label>
+          <select id="receiver-C">
+            <option value="A">User A</option>
+            <option value="B">User B</option>
+          </select>
+          <label>Jumlah:</label>
+          <input id="amount-C" type="number" min="1" value="10" />
+          <button id="send-C">Kirim</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 12px">
+        <label>Mempool (pending transactions):</label>
+        <textarea
+          id="mempool"
+          rows="3"
+          placeholder="Setiap transaksi di baris baru. Contoh: A -> B:10"
+        ></textarea>
+      </div>
+
+      <div style="margin-top: 12px">
+        <button id="btn-mine-all">Mine Semua Transaksi</button>
+        <button id="btn-verify-consensus">Verify</button>
+        <button id="btn-consensus">Consensus</button>
+      </div>
+
+      <h3 style="margin-top: 20px">Blockchain Tiap User</h3>
+      <div id="chains">
+        <h4>Database User A</h4>
+        <div id="chain-A" class="chain-row"></div>
+        <h4>Database User B</h4>
+        <div id="chain-B" class="chain-row"></div>
+        <h4>Database User C</h4>
+        <div id="chain-C" class="chain-row"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+    <script src="app4.js"></script>
+  </body>
+</html>
